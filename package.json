@@ -1,6 +1,6 @@
 {
   "name": "tacer-seed",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The seed of tacer templates.",
   "main": "dist/index.js",
   "bin": ".bin/generate.js",
