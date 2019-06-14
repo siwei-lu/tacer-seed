@@ -4,7 +4,8 @@
   "description": "{{description}}",
   "bin": ".bin/generate.js",
   "scripts": {
-    "test": ""
+    "start": "tacer-script start",
+    "build": "tacer-script build"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,6 @@
   "author": "{{author}}",
   "license": "{{license}}",
   "dependencies": {
-    "tacer-seed": "^0.1.0"
+    "tacer-plugin-{{template}}": "^0.1.0"
   }
 }

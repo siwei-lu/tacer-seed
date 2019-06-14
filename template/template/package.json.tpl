@@ -2,7 +2,9 @@
   "name": "{{template}}",
   "version": "{{version}}",
   "description": "{{description}}",
-  "bin": ".bin/generate.js",
+  "bin": {
+    "tacer-script": ".bin/script.js"
+  } ,
   "scripts": {
     "test": ""
   },
