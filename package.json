@@ -1,0 +1,35 @@
+{
+  "name": "tacer-seed",
+  "version": "0.1.0",
+  "description": "The seed of tacer templates.",
+  "main": "dist/index.js",
+  "bin": ".bin/generate.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "npm run build && node .bin/generate",
+    "build": "rollup -c",
+    "test": "ts-mocha --paths test/index.ts test/**/*.ts"
+  },
+  "keywords": [
+    "tacer",
+    "template",
+    "seed"
+  ],
+  "author": "Idan Loo <im@siwei.lu>",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "rollup": "^1.15.5",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-terser": "^5.0.0",
+    "rollup-plugin-typescript2": "^0.21.1",
+    "ts-mocha": "^6.0.0",
+    "typescript": "^3.5.2"
+  }
+}
