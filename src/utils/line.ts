@@ -6,17 +6,14 @@ type Option = {
   output: Writable
 }
 
-const _defaultOption = {
-  input: process.stdin,
-  output: process.stdout,
-}
-
 export default async function line(
   question: string,
-  preset: string = '',
-  option: Option = _defaultOption
+  preset: string = ''
 ): Promise<string> {
-  const rl = createInterface(option)
+  const rl = createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  })
 
   if (preset) {
     question += `(${preset}) `

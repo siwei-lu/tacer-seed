@@ -1,26 +1,26 @@
-import Template from '/models/Template'
-import dirname from '/utils/dirname'
-import copy, { CopyFileCallbackOption } from '/utils/copy'
-
-const copyCallback = (tpl: Template) => ({
-  path,
-  content,
-}: CopyFileCallbackOption) => {
-  if (path.endsWith('.tpl')) {
-    path = path.split(/\.tpl$/).shift()
-    content = tpl.render(content)
-  }
-
-  return { path, content }
-}
+import Template from '~/models/Template'
+import dirname from './dirname'
+import unzip from './unzip'
+import { join } from 'path'
+import combine from './combine'
+import { outputFile } from 'fs-extra'
 
 export default async function generate(
   name: string,
-  path: string,
+  zipped: string,
   dest: string
 ) {
   const projectName = dirname(dest)
   const tpl = await Template.fromStdin(name, { name: projectName })
 
-  await copy(path, dest, copyCallback(tpl))
+  await unzip(zipped, dest, async e => {
+    if (!e.path.endsWith('.tpl')) {
+      return true
+    }
+
+    const path = join(dest, e.path.split(/\.tpl$/).shift())
+    const content = await combine(e).then(c => tpl.render(c))
+
+    await outputFile(path, content)
+  })
 }

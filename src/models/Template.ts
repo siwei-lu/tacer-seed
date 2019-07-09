@@ -1,4 +1,4 @@
-import line from '/utils/line'
+import line from '~/utils/line'
 import handlebars from 'handlebars'
 
 export interface ITemplate {

@@ -1,14 +1,13 @@
 {
-  "include": ["src"],
   "compilerOptions": {
-    "baseUrl": "src",
     "target": "es2015",
+    "baseUrl": "./src",
     "moduleResolution": "node",
+    "paths": {
+      "~/*": ["./*"]
+    },
     "esModuleInterop": true,
     "declaration": true,
-    "paths": {
-      "*": ["./*"]
-    }
-  },
-  "exclude": ["node_modules"]
+    "declarationDir": "./types"
+  }
 }
