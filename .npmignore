@@ -1,7 +1,7 @@
-node_modules/
-.rpt2_cache/
+.DS_Store
 src/
 test/
-rollup.config.js
+dist/
+node_modules/
+template/
 tsconfig.json
-.gitignore
