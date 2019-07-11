@@ -3,8 +3,8 @@
   "version": "0.2.1",
   "description": "The seed of tacer templates.",
   "bin": {
-    "tacer-seed": ".bin/run.js",
-    "tacer-pulish": ".bin/publish.js"
+    "tacer-bin": ".bin/run.js",
+    "tacer-publish": ".bin/publish.js"
   },
   "main": "./dist/index.js",
   "types": "./types",
