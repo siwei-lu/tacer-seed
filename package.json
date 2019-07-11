@@ -1,6 +1,6 @@
 {
   "name": "tacer-seed",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "The seed of tacer templates.",
   "bin": {
     "tacer-seed": ".bin/run.js",
@@ -12,8 +12,7 @@
     "start": "npm run build && node .bin/run",
     "build": "tacer-script build",
     "test": "tacer-script test",
-    "postbuild": "node .bin/publish.js",
-    "preversion": "npm run build"
+    "postbuild": "node .bin/publish.js"
   },
   "repository": {
     "type": "git",
