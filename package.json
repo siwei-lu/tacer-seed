@@ -1,6 +1,6 @@
 {
   "name": "tacer-seed",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "The seed of tacer templates.",
   "bin": {
     "tacer-bin": "bin/run.js",
