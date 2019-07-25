@@ -1,4 +1,4 @@
-import { createReadStream, createWriteStream } from 'fs'
+import { createReadStream } from 'fs'
 import { join } from 'path'
 import unzipper, { Entry } from 'unzipper'
 import { Transform } from 'stream'
